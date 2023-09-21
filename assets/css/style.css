@@ -236,4 +236,24 @@
     .contTarjeta{
         aspect-ratio: 1/1.2;
     }
+    .contGeneral{
+        display: inline-block;
+    }
+    .contBio{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        padding: 2%;
+    }
+        .contBio p, .contacto, h2{
+            margin: 0%;
+            margin-bottom: 3%;
+        }
+        .contacto i, .contacto a, .contacto p{
+            margin: 0%;
+        }
+    .contProyectos{
+        width: 100%;
+        position: relative;
+    }
 }
