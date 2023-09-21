@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.overlayPdf{
+    display: none;
+    background-color: #2C3333cc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+    .contPdf{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 90vw;
+        height: 100vh;
+        z-index: 2;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #activadorPdf{
+        color: #DBBF84;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    #activadorPdf:hover{
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+.contGeneral{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.contBio{
+    background-color: #565F6F;
+    position: fixed;
+    width: 33%;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    color: #ffffff;
+}
+    .contBio p, .contacto, h2{
+        margin: 10%;
+        margin-top: 15%;
+    }
+    .contacto i, .contacto a, .contacto p{
+        margin: 3%;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .contacto a{
+        color: #bbbbff;
+        transition: 0.3s;
+    }
+    .contacto a:hover{
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+.contProyectos{
+    background-color: #EBE4DC;
+    opacity: 0.7;
+    position: absolute;
+    width: 67%;
+    right: 0;
+    top: 0;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    color: #47559D;
+}
+    .contTarjeta{
+        width: 40%;
+        aspect-ratio: 1/1;
+        background-color: #EBE4DC;
+        margin: 30px;
+        flex: 1 1 auto;
+        position: relative;
+        overflow: hidden;
+        /*background: linear-gradient(#EBE4DC, #EBE4DC) padding-box, 
+            linear-gradient(180deg, #565F6F88 0px, transparent 30%, transparent 70%, #565F6F88 100%) border-box;*/
+        border-radius: 0px;
+        border: 4px solid #565F6F22;
+        background: #ffffff;
+        transition: 0.3s;
+    }
+        .contTarjeta:hover{
+            border: 4px solid #565F6F44;
+        }
+        .tarjeta{
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            background-color: #F5F0EA;
+            /*border: 3px solid #E0D5CA22;*/
+            margin: 15%;
+            text-align: center;
+            justify-content: center;
+            transition: 0.3s;
+            filter: grayscale(0.8);
+        }
+            .imgCont{
+                width: 90%;
+                aspect-ratio: 5/4;
+                margin-top: 5%;
+            }
+            .tituloTarjeta{
+                color: #2C3333;
+                margin-top: 4%;
+            }
+        .tarjetaBack{
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            background: linear-gradient(transparent, #565F6F44);
+            opacity: 0;
+            transition: 0.3s;
+            bottom: 0;
+            color: #222222;
+            font-weight: 600;
+            text-align: center;
+            padding: 5% 5% 1% 5%;
+        }
+            .tarjetaBack p{
+                height: 70%;
+                margin: 0;
+                font-size: 0.8rem;
+            }
+            .tarjetaBack a{
+                height: 15%;
+                margin: 0;
+                color: hsl(207, 64%, 29%);
+                transition: 0.3s;
+                text-decoration: none;
+            }
+                .tarjetaBack a:hover{
+                    color: hsl(207, 84%, 19%);
+                    text-decoration: underline;
+                }
+            .contTarjeta:hover .tarjetaBack{
+                opacity: 1;
+                transition: 0.5s ease-out;
+                height: 30%;
+            }
+            .contTarjeta:hover .tarjeta{
+                transform: translateY(-18%);
+                filter: none;
+                /*border: 3px solid #E0D5CA;*/
+            }
+            
+
+@media (min-width: 1101px) and (max-width: 1300px){
+    .contTarjeta{
+        margin: 20px;
+    }
+    .tarjeta p{
+        font-size: 1rem;
+    }
+    .tarjetaBack p{
+        font-size: 0.75rem;
+    }
+    .tarjetaBack a{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 951px) and (max-width: 1100px){
+    .contTarjeta{
+        margin: 8px;
+    }
+    .tarjeta p{
+        font-size: 0.85rem;
+    }
+    .tarjetaBack p{
+        font-size: 0.7rem;
+    }
+    .tarjetaBack a{
+        font-size: 0.9rem;
+    }
+}
+
+@media all and (max-width: 950px){
+    .contTarjeta{
+        margin: 5% 15%;
+    }
+    .tarjeta p{
+        font-size: 1rem;
+    }
+    .tarjetaBack p{
+        font-size: 0.9rem;
+    }
+    .tarjetaBack a{
+        font-size: 1rem;
+    }
+    .contTarjeta{
+        width: 50%;
+    }
+}
+
+@media all and (max-width: 750px){
+    .tarjeta p{
+        font-size: 0.9rem;
+    }
+    .tarjetaBack p{
+        font-size: 0.75rem;
+    }
+    .tarjetaBack a{
+        font-size: 0.9rem;
+    }
+    .tarjetaBack{
+        opacity: 1;
+        transition: 0.5s ease-out;
+        height: 40%;
+    }
+    .tarjeta{
+        transform: translateY(-18%);
+        filter: none;
+        /*border: 3px solid #E0D5CA;*/
+        height: 60%;
+        margin-bottom: 5%;
+    }
+    .contTarjeta{
+        aspect-ratio: 1/1.2;
+    }
+}
