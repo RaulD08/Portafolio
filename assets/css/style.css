@@ -45,7 +45,7 @@
 }
 
 .contBio{
-    background-color: #565F6F;
+    background-color: #171717;
     position: fixed;
     width: 33%;
     left: 0;
@@ -63,7 +63,7 @@
         display: inline-block;
     }
     .contacto a{
-        color: #bbbbff;
+        color: #3282B8;
         transition: 0.3s;
     }
     .contacto a:hover{
@@ -72,8 +72,7 @@
     }
 
 .contProyectos{
-    background-color: #EBE4DC;
-    opacity: 0.7;
+    background-color: #232323;
     position: absolute;
     width: 67%;
     right: 0;
@@ -86,7 +85,7 @@
     .contTarjeta{
         width: 40%;
         aspect-ratio: 1/1;
-        background-color: #EBE4DC;
+        background-color: #EDEDED;
         margin: 30px;
         flex: 1 1 auto;
         position: relative;
@@ -94,24 +93,23 @@
         /*background: linear-gradient(#EBE4DC, #EBE4DC) padding-box, 
             linear-gradient(180deg, #565F6F88 0px, transparent 30%, transparent 70%, #565F6F88 100%) border-box;*/
         border-radius: 0px;
-        border: 4px solid #565F6F22;
-        background: #ffffff;
+        /*border: 4px solid #565F6F22;*/
         transition: 0.3s;
     }
-        .contTarjeta:hover{
+        /*.contTarjeta:hover{
             border: 4px solid #565F6F44;
-        }
+        }*/
         .tarjeta{
             position: absolute;
             width: 70%;
             height: 70%;
-            background-color: #F5F0EA;
+            background-color: #EDEDED;
             /*border: 3px solid #E0D5CA22;*/
             margin: 15%;
             text-align: center;
             justify-content: center;
             transition: 0.3s;
-            filter: grayscale(0.8);
+            /*filter: grayscale(0.8);*/
         }
             .imgCont{
                 width: 90%;
@@ -216,12 +214,17 @@
         font-size: 0.9rem;
     }
     .tarjetaBack p{
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
     .tarjetaBack a{
         font-size: 0.9rem;
     }
     .tarjetaBack{
+        opacity: 1;
+        transition: 0.5s ease-out;
+        height: 40%;
+    }
+    .contTarjeta:hover .tarjetaBack{
         opacity: 1;
         transition: 0.5s ease-out;
         height: 40%;
